@@ -36,9 +36,7 @@
         </span>
       </div>
 
-     <div id="button-add" class="mobile_button mobile_button--add">
-        +
-     </div>
+
 
       <div  id="items-wrapper" class="items-wrapper">
         <ul  class="items--list">
@@ -79,6 +77,23 @@
             <div class="items--list--text"><span></span><span></span></div>
           </li>
         </ul>
+
+        <div id="button-add" class="mobile_button mobile_button--add">
+           <span>+</span>
+
+           <div class="mobile_button--layout--content">
+             <div class="items--list--image"><span></span></div>
+             <div class="items--list--text"><span></span><span></span>
+
+               <div id="button-insert" class="mobile_button--insert">
+                  <span>host item</span>
+                  <i class="fa fa-cloud" aria-hidden="true"></i>
+                </div>
+             </div>
+
+
+           </div>
+        </div>
       </div>
 
     </div>
@@ -93,7 +108,8 @@
       scrollbars: true
   });
 
-  $('#button-add').addClass('mobile_button--layout');
+  $('#button-add').on('click', function() { $(this).addClass('mobile_button--layout'); });
+  $('#button-insert').on('click', function(e) { e.stopPropagation(); $('#button-add').removeClass('mobile_button--layout'); });
   </script>
 </body>
 </html>
