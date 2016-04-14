@@ -1,6 +1,7 @@
 @import '~font-awesome/css/font-awesome.css'
 @import '~roboto-fontface/css/roboto-fontface.css'
 
+@import './items.sass'
 
 body,html,.application
   height: 100%
@@ -13,19 +14,32 @@ body,html,.application
   box-sizing: border-box
 
 .application
-  background-color: darken(#e0f2f1, 2%)
+  background-color: #fff
   display: flex
 
 .mobile-wrapper
   display: flex
   margin: auto
   flex-direction: column
-  min-width: 300px
-  min-height: 480px
+  width: 300px
+  height: 480px
+  overflow: hidden
   background: radial-gradient(#673ab7, lighten(#673ab7, 5%))
   box-shadow: 1px 1px 5px #444
 
 .mobile
+  &_subnav
+    margin: 20px
+    color: #fff
+    &--desc
+      float: left
+      margin-top: 10px
+      font-size: 14px
+      text-transform: uppercase
+    &--icons
+      float: right
+      font-size: 18px
+
   =navItem
     width: 100%
     position: absolute
