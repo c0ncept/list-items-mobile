@@ -36,6 +36,10 @@
         </span>
       </div>
 
+     <div id="button-add" class="mobile_button mobile_button--add">
+        +
+     </div>
+
       <div  id="items-wrapper" class="items-wrapper">
         <ul  class="items--list">
           <li>
@@ -87,7 +91,9 @@
     new IScroll('#items-wrapper', {
       mouseWheel: true,
       scrollbars: true
-  })
+  });
+
+  $('#button-add').addClass('mobile_button--layout');
   </script>
 </body>
 </html>
