@@ -103,13 +103,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll-lite.min.js"></script>
   <script>
-    new IScroll('#items-wrapper', {
+   var scroll =  new IScroll('#items-wrapper', {
       mouseWheel: true,
       scrollbars: true
   });
 
   $('#button-add').on('click', function() { $(this).addClass('mobile_button--layout'); });
   $('#button-insert').on('click', function(e) { e.stopPropagation(); $('#button-add').removeClass('mobile_button--layout'); });
+
+  /* scenario */
+  setTimeout(function() {
+    scroll.scrollTo(0, -500, 500);
+  }, 500);
+
+  setTimeout(function() {
+    $('#button-add').click();
+  },1500);
+
+  setTimeout(function() {
+    $('#button-insert').click();
+  },2500);
+
+
   </script>
 </body>
 </html>
